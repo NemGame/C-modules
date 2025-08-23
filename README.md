@@ -1,7 +1,7 @@
 # C modules
 ### My C single-header libraries
 ## The libs
-### [printfw.h:]("./printfw.h")
+### [printfw.h:](printfw.h)
 - Windows only
 - Adds the function printfw(wchar_t wstr)
 - It actually prints in UTF-8, unlike wprintf is (for me)
