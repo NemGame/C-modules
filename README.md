@@ -1,7 +1,7 @@
 # C modules
 ### My C single-header libraries
 ## Contents
-### [printfw](#printfw.h)
+### [printfw](#printfwh)
 ## The libs
 ### [printfw.h:](printfw.h)
 - Windows only
