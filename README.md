@@ -21,3 +21,7 @@ int main() {
 ```
 Állat
 ```
+### Everything it adds:
+- printfw   =>   prints out wide characters
+- printfwl  =>   prints out wide characters and a new line (smart)
+- putcharw  =>   prints out a wide character
