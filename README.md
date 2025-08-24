@@ -5,7 +5,6 @@
 ## The libs
 ### [printfw.h:](printfw.h)
 - Windows only
-- Adds the function printfw(wchar_t wstr)
 - It actually prints in UTF-8, unlike wprintf is (for me)
 - Stands for PrintfWide (printf because of c [screw formatting], wide because you need wide characters
 #### Example:
@@ -21,7 +20,7 @@ int main() {
 ```
 Állat
 ```
-### Everything it adds:
-- printfw   =>   prints out wide characters
-- printfwl  =>   prints out wide characters and a new line (smart)
-- putcharw  =>   prints out a wide character
+#### Everything it adds:
+- printfw(wchar_t *wchar) => prints out wide characters
+- printfwl(wchar_t *wchar) => prints out wide characters and a new line (smart)
+- putcharw(wchar_t wchar) => prints out a wide character
