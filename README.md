@@ -21,6 +21,6 @@ int main() {
 Állat
 ```
 #### Everything it adds:
-- printfw(wchar_t *wchar) => prints out wide characters
-- printfwl(wchar_t *wchar) => prints out wide characters and a new line (smart)
-- putcharw(wchar_t wchar) => prints out a wide character
+- printfw(wchar_t *wstr) => prints out wide characters
+- printfwl(wchar_t *wstr) => prints out wide characters and a new line (smart)
+- putcharw(wchar_t c) => prints out a wide character
