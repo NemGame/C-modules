@@ -29,7 +29,9 @@ int main() {
 - Windows only
 - It prints the given element into a centered table-like structure
 ### Everything it adds:
-- printCenteredTable()
+- printCenteredTable(char *items[], int len, float widthPercent) => does the above mentioned stuff, returns void
+- centeredText(char *text, int width) => returns the text as another text, but centered inside width amount of spaces, you need to free it later on
+- centerText(char **text, int width) => throws out the contents of text, then replaces it with a centered version of it, you need to free it later on, returns void
 ### Example:
 ```c
 #include "table.h"
