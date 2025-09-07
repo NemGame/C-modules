@@ -9,7 +9,7 @@
 - It actually prints in UTF-8, unlike wprintf is (for me)
 - Stands for PrintfWide (printf because of c [screw formatting], wide because you need wide characters
 #### Example:
-```
+```c
 #include <printfw.h>
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
 - Windows only
 - It prints the given element into a centered table-like structure
 ### Example:
-```h
+```c
 #include "table.h"
 
 int main(int argc, char const *argv[])
@@ -42,7 +42,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 ```
-#### Output:
+#### Output: (terminal width is 119)
 ```
                         -----------------------------------------------------------------------
                         | Shadows |  have   |   no    |  speed  |   yet   |  they   |  still  |
