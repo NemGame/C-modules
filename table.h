@@ -37,7 +37,7 @@ void centerText(char **text, int width) {
     *text = tmp;
 }
 
-void printCommandTable(char *items[], int len, float widthPercent) {
+void printCenteredTable(char *items[], int len, float widthPercent) {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     int width, height;
 
