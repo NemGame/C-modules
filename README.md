@@ -1,7 +1,8 @@
 # C modules
 ### My C single-header libraries
+### I use gcc to compile most of my stuff
 ## Contents
-### [printfw](#printfwh)
+### [printfw](#printfwh), [table](#tableh)
 ## The libs
 ### [printfw.h:](printfw.h)
 - Windows only
@@ -24,3 +25,28 @@ int main() {
 - printfw(wchar_t *wstr) => prints out wide characters
 - printfwl(wchar_t *wstr) => prints out wide characters and a new line (smart)
 - putcharw(wchar_t c) => prints out a wide character
+### [table.h](table.h)
+- Windows only
+- It prints the given element into a centered table-like structure
+### Example:
+```h
+#include "table.h"
+
+int main(int argc, char const *argv[])
+{
+    char *items[] = {
+        "Shadows", "have", "no", "speed", "yet", "they", "still", "move", ".", "now", "this", "is", "just", "yapping", "yipeee"
+    };
+    int itemCount = sizeof(items) / sizeof(items[0]);
+    printCommandTable(items, itemCount, 60);
+    return 0;
+}
+```
+#### Output:
+```
+                        -----------------------------------------------------------------------
+                        | Shadows |  have   |   no    |  speed  |   yet   |  they   |  still  |
+                        |  move   |    .    |   now   |  this   |   is    |  just   | yapping |
+                        | yipeee  |------------------------------------------------------------
+                        -----------
+```
