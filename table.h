@@ -32,7 +32,7 @@ char *centeredText(char *text, int width) {
     return result;
 }
 
-char *centeredTextW(wchar_t *text, int width) {
+wchar_t *centeredTextW(wchar_t *text, int width) {
     int len = wcslen(text);
     if (len >= width) {
         wchar_t *copy = (wchar_t*)calloc((len + 1), sizeof(wchar_t));
