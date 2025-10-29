@@ -143,8 +143,12 @@ void printCommandTableW(wchar_t *itemsPtr[], int len, float widthPercent) {
             containerLength = wcslen(items[i]) + minPadding;
         }
     }
+    int x = (int)(width * widthPercent / 100.0 / 2);
+    if (containerLength > x) {
+        containerLength = x;
+    }
     float margin = 1 - widthPercent / 100.0;
-    int containerPerLine = round(width * (1 - margin) / containerLength);
+    int containerPerLine = floor(width * (1 - margin) / containerLength);
     int lineWidth = containerLength * (containerPerLine - 1) + containerPerLine;
 
     int leftPaddingLen = (width - lineWidth) / 2;
@@ -162,6 +166,14 @@ void printCommandTableW(wchar_t *itemsPtr[], int len, float widthPercent) {
             putchar(L'|');
         }
         wchar_t *name = items[i];
+        if (wcslen(name) > containerLength) {
+            int nDots = 3, padding = 2;
+            name = (wchar_t*)calloc(containerLength + 1 + nDots + padding * 2, sizeof(wchar_t));
+            wcsncpy(name, items[i], containerLength - nDots - padding * 2);
+            wchar_t dots = L'.';
+            for (int i = 0; i < nDots; ++i) wcsncat(name, &dots, 1);
+            name[containerLength] = L'\0';
+        }
         centerTextW(&name, containerLength);
         printfw2(name, L"|");
         free(name);
