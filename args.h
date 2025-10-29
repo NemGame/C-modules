@@ -10,9 +10,6 @@
 #include <string.h>
 #include <wchar.h>
 
-/**
- * @brief Egy kulcs-érték párt reprezentáló struktúra.
- */
 typedef struct {
     char *name;
     char *value;
@@ -231,3 +228,4 @@ void processArgsAW(int argc, wchar_t **argv, attrw attributes[], wchar_t **added
 }
 
 #endif
+
