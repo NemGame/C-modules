@@ -2,7 +2,7 @@
 ### My C single-header libraries
 ### I use gcc to compile most of my stuff
 ## Contents
-### [printfw](#printfwh), [table](#tableh)
+### [printfw](#printfwh), [table](#tableh), [args](#argsh)
 ## The libs
 ## [printfw.h:](printfw.h)
 - Windows only
