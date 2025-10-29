@@ -142,7 +142,7 @@ int main(int argc, char **argv) {
     return res;
 }
 ```
-### Terminal: `.\q --file wasd -wasd ye`
+### Terminal: `gcc .\q.c -o q.exe & .\q --file wasd -wasd ye`
 ### Output:
 ```
 Added:
