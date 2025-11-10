@@ -10,6 +10,9 @@
 #include <string.h>
 #include <wchar.h>
 
+/**
+ * @brief Egy kulcs-érték párt reprezentáló struktúra.
+ */
 typedef struct {
     char *name;
     char *value;
@@ -20,7 +23,7 @@ typedef struct {
     wchar_t *value;
 } attrw;
 
-void printListAttrW(attrw *array, int size) {
+void printListAttrW(attrw array[], int size) {
     if (size <= 0) return;
     for (int i = 0; i < size; ++i) {
         wprintf(L"  -> %ls = %ls\n", array[i].name, (array[i].value != NULL) ? array[i].value : L"(NULL)");
@@ -228,4 +231,3 @@ void processArgsAW(int argc, wchar_t **argv, attrw attributes[], wchar_t **added
 }
 
 #endif
-
