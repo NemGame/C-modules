@@ -73,7 +73,7 @@ int main(int argc, char const *argv[])
 - listLenNullW(wchar_t **array) => lenth of a `wchar_t**` with NULL as the last element
 - listLenNullAttr(attr *array) => lenth of a `attr *` with .name = NULL as the last element
 - processArgs => Processes args
-```c
+```cpp
 processArgs(int argc, // length of args
 char *args[], // argv
 attr attributes[], // attr array[] 
@@ -90,7 +90,7 @@ int debugMode // You got 2 guesses
 - valueOfAttr(attr attributes[], char *name) => if .name is in `attributes`, .value is return, otherwise NULL
 - valueOfAttrW(attrw attributes[], wchar_t *name) => if .name is in `attributes`, .value is return, otherwise NULL
 - processArgsA => Processes args automatically
-```c
+```cpp
 processArgsA(int argc,  // length of argv
 char *argv[], // argv
 attr attributes[], // "--foo bar" => .name = foo, .value = bar
