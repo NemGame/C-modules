@@ -16,7 +16,7 @@
 */
 static inline void printfw(const std::wstring_view wstr) {
     if (wstr.empty()) return;
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    static HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     DWORD written;
     if (!WriteConsoleW(hConsole, wstr.data(), (DWORD)wstr.length(), &written, NULL)) {
         fwprintf(stderr, L"Error\n");
