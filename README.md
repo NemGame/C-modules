@@ -2,9 +2,12 @@
 ### My C single-header libraries
 ### I use gcc to compile most of my stuff
 ## Contents
-### [printfw](#printfwh), [table](#tableh), [args](#argsh)
+### C
+### [printfw](#printfwh--c), [table](#tableh), [args](#argsh)
+### C++
+### [printfw](#printfwh--c), [table](#tableh-cpp)
 ## The libs
-## [printfw.h:](printfw.h)
+## [printfw.h:](printfw.h) / [C++](cpp/printfw.h)
 - Windows only
 - It actually prints in UTF-8, unlike wprintf is (for me)
 - Stands for PrintfWide (printf because of c [screw formatting], wide because you need wide characters)
@@ -153,3 +156,17 @@ ye
 Attributes2:
   -> --file = wasd
 ```
+## [table.h (cpp)](cpp/table.h)
+### Smart, WIP (dynamic isn't implemented yet)
+### Everything it adds:
+- TableCenterText(const std::wstring& s, int width = -1) => returns the wstring padded automatically on both sides; width=-1 -> 1 space on both sides
+- TableStringToWString(const std::string_view text) => Converts string to wstring
+- TableWStringToString(const std::wstring_view text) => Converts wstring to string
+- TableConsoleWidth() => returns the console's width
+- PrintTable(const std::vector<std::wstring>& items, double maxwidth = 80, bool dynamic = false)
+
+=> items - items to print
+
+=> maxwidth -  % of the console width it may use, if greater than 1, it gets divided by 100
+
+=> dynamic - Not implemented yet. false - all rows use the same width, true - all rows have unique widths based on their contents
