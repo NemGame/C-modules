@@ -14,7 +14,7 @@
 #include <windows.h>
 #include <codecvt>
 
-std::wstring TableCenterText(const std::wstring& s, int width = -1) {
+std::wstring TableCenterText(const std::wstring& s, int width = -1, bool right=true) {
 	if (width < 0) width = static_cast<int>(s.length() + 2);
 	if (static_cast<int>(s.length()) >= width) return s;
 	int total_padding = width - static_cast<int>(s.length());
@@ -22,7 +22,7 @@ std::wstring TableCenterText(const std::wstring& s, int width = -1) {
 	int right_padding = total_padding - left_padding;
 	std::wstring padded_string(left_padding, L' ');
 	padded_string += s;
-	padded_string += std::wstring(right_padding, L' ');
+	if (right) padded_string += std::wstring(right_padding, L' ');
 	return padded_string;
 }
 std::wstring TableStringToWString(const std::string_view text) {
